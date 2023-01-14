@@ -15,7 +15,7 @@
 
 ## Description
 
-_This is an example of building your own API using C#/.NET Core MVC.  There are examples of different routes in the controller to querry your MySQL database and process the API requests.  There are also more examples of model validation in the model._
+_This is an example of building your own API using C#/.NET Core MVC.  There are examples of different routes in the controller to querry your MySQL database and process the API requests.  There are also more examples of model validation in the model.  For an example on scaffolding api controllers delete the AnimalsController.cs and follow the scaffolding instructions below.  You must first create your model and database contextn before scaffolding a controller._
 
 ## Setup/Installation Requirements
 
@@ -52,6 +52,27 @@ dotnet watch run
 ```
 dotnet watch run --launch-profile "production"
 ```
+
+## Scafollding a controller 
+
+* _in the CretacuousAip folder run the following commands_
+```
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 6.0.0
+```
+```
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design -v 6.0.0
+```
+```
+dotnet aspnet-codegenerator controller -name AnimalsController -async -api -m Animal -dc CretaceousApiContext -outDir Controllers
+```
+* _^^^^^ The above command invokes the asp-netcodegenerator to do the following ^^^^^_
+* _- controller : create a controller_
+* _- name AnimalsController : use the name AnimalsController_
+* _- async : use asynchronous actions_
+* _- api : create the controller for an API_
+* _- m Animal : use the Animal model for the controller actions_
+* _- dc CretaceousApiContext : create a database context of type CretaceousApiContext_
+* _- outDir Controllers : add the new controller file to the Controllers/ directory_
 
 ## Known Bugs
 

@@ -37,11 +37,11 @@ _This is an example of building your own API using C#/.NET Core MVC.  There are 
 }
 * _in the CretacuousAip folder run the following commands_
 ```
+```
 dotnet restore
 ```
 ```
 dotnet ef database update
-```
 ```
 
 * _to run project in developement mode_

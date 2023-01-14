@@ -15,7 +15,7 @@
 
 ## Description
 
-_This is an example of building your own API using C#/.NET Core MVC.  There are examples different routes in the controller to querry your MySQL database and process the API requests.  There are also more examples of model validation in the model._
+_This is an example of building your own API using C#/.NET Core MVC.  There are examples of different routes in the controller to querry your MySQL database and process the API requests.  There are also more examples of model validation in the model._
 
 ## Setup/Installation Requirements
 

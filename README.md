@@ -35,8 +35,8 @@ _This is an example of building your own API using C#/.NET Core MVC.  There are 
       "DefaultConnection": "Server=localhost;Port=3306;database=[database_name];uid=[USERNAME];pwd=[PASSWORD];"
   }
 }
-* _in the CretacuousAip folder run the following commands_
 ```
+* _in the CretacuousAip folder run the following commands_
 ```
 dotnet restore
 ```

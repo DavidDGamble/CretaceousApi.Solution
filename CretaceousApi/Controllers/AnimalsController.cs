@@ -17,52 +17,52 @@ namespace CretaceousApi.Controllers
 
     // GET api/animals
     //vvvvv---returns all animals in database---vvvvv
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Animal>>> Get()
-    {
-      return await _db.Animals.ToListAsync();
-    }
+    // [HttpGet]
+    // public async Task<ActionResult<IEnumerable<Animal>>> Get()
+    // {
+    //   return await _db.Animals.ToListAsync();
+    // }
 
     // GET: api/animals
     // GET: api/animals?species=dinosaur
     // binds the value "dinosaur" to the variable species
-    //vvvvv---returns results of a database search in animals table for the species of dinosaur---vvvvv 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Animal>>> Get(string species)
-    {
-      IQueryable<Animal> query = _db.Animals.AsQueryable();
+    //vvvvv---returns results of a database search in animals table for the species of dinosaur or all if no parameters---vvvvv 
+    // [HttpGet]
+    // public async Task<ActionResult<IEnumerable<Animal>>> Get(string species)
+    // {
+    //   IQueryable<Animal> query = _db.Animals.AsQueryable();
 
-      if (species != null)
-      {
-        query = query.Where(entry => entry.Species == species);
-      }
+    //   if (species != null)
+    //   {
+    //     query = query.Where(entry => entry.Species == species);
+    //   }
 
-      return await query.ToListAsync();
-    }
+    //   return await query.ToListAsync();
+    // }
 
     // GET api/animals
     // GET: api/animals?species=dinosaur&name=matilda
-    //vvvvv---returns results of a database search in animals table for the species of dinosaur and name of matilda---vvvvv
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string name)
-    {
-      IQueryable<Animal> query = _db.Animals.AsQueryable();
+    //vvvvv---returns results of a database search in animals table for the species of dinosaur and name of matilda or all if no parameters---vvvvv
+    // [HttpGet]
+    // public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string name)
+    // {
+    //   IQueryable<Animal> query = _db.Animals.AsQueryable();
 
-      if (species != null)
-      {
-        query = query.Where(entry => entry.Species == species);
-      }
+    //   if (species != null)
+    //   {
+    //     query = query.Where(entry => entry.Species == species);
+    //   }
 
-      if (name != null)
-      {
-        query = query.Where(entry => entry.Name == name);
-      }
+    //   if (name != null)
+    //   {
+    //     query = query.Where(entry => entry.Name == name);
+    //   }
 
-      return await query.ToListAsync();
-    }
+    //   return await query.ToListAsync();
+    // }
 
     // GET api/animals
-    //vvvvv---uses same logic as above to search the database and return the results---vvvvv
+    //vvvvv---uses same logic as above to search the database and return the results or all if no parameters---vvvvv
     [HttpGet]
     public async Task<List<Animal>> Get(string species, string name, int minimumAge)
     {
